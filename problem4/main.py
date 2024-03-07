@@ -1,5 +1,20 @@
 def muncul_sekali(angka):
-    return []
+    # num = int(angka)
+    digits = [int(digit) for digit in str(angka)]
+    jum_digit = {}
+    digit_muncul_sekali = []
+
+    for digit in digits:
+        if digit in jum_digit:
+            jum_digit[digit] += 1
+        else:
+            jum_digit[digit] = 1
+    
+    for digit in jum_digit:
+        if jum_digit[digit] == 1:
+            digit_muncul_sekali.append(digit)
+    
+    return digit_muncul_sekali
 
 if __name__ == '__main__':
     print(muncul_sekali("1234123")) # [4]

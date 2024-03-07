@@ -1,5 +1,6 @@
 def pow(x, n):
-    return 0
+    hasil = x ** n
+    return hasil
 
 if __name__ == '__main__':
     print(pow(2, 3)) # 8

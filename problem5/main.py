@@ -1,5 +1,14 @@
 def pair_sum(arr, target):
-    return []
+    pairs = {}
+
+    for num in arr:
+        hasil = target - num
+        if hasil in pairs:
+            return [arr.index(hasil), arr.index(num)]
+        else:
+            pairs[num] = []
+
+    return None
 
 if __name__ == '__main__':
     print(pair_sum([1, 2, 3, 4, 6], 6)) # [1, 3]
